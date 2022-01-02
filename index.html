@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Volkov Danil</title>
+</head>
+<body>
+    <header class="wrapper">
+        <div class="header_left">
+            <img class="avatar" src="img/avatar.jpg" width="200" height="200" alt="My photo">
+            <div class="header_text">
+                <h1>Volkov Danil</h1>
+                <h2>Frontend Developer</h2>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#code">Code example</a></li>
+                <li><a href="#works">Works example</a></li>
+            </ul>
+        </nav>
+    </header>    
+    <main class="wrapper">
+        <aside>
+            <section id="contacts">
+                <h2>Contact information</h2>
+                <ul class="contacts_list">
+                    <li><h4>Phone:</h4><a href="tel:+79120517244">+79120517244</a></li>
+                    <li><h4>Email:</h4><a href="mailto:79120517244@yandex.ru">79120517244@yandex.ru</a></li>
+                    <li><h4>Telegram:</h4><a href="https://t.me/Snake911">@Snake911</a></li>
+                    <li><a href="https://www.linkedin.com/in/volkovdanil/">Linkendin</a></li>
+                </ul>
+            </section>
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>SASS (Basic)</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                    <li>Git</li>
+                    <li>React (Basic)</li>
+                </ul>
+            </section>
+            <section id="courses">
+                <h2>Courses</h2>
+                <ul>
+                    <li>Stepik - <a href="https://stepik.org/cert/106210">Basic HTML & CSS</a></li>
+                    <li>Stepik - <a href="https://stepik.org/cert/98515">JavaScript for beginners</a></li>
+                    <li>JavaScript Manual on <a href="https://learn.javascript.ru/">learn.javascript.ru</a> (in progress)</li>
+                </ul>
+            </section>
+            <section id="languages">
+                <h2>Languages</h2>
+                <ul>
+                    <li>English - A2 (in progress)</li>
+                    <li>Russian - Native</li>
+                </ul>
+            </section>
+        </aside>
+        <div class="content">
+            <section id="about">
+                <h2>About me</h2>
+                <p>Since 2018 I have been working as a web developer. I made up and integrated the layout for Bitrix. React and related tools are interesting. I aim to develop in this direction.</p>
+            </section>
+            <section id="code">
+                <h2>Code example</h2>
+                <h3>RGB To Hex Conversion</h3>
+                <p>The rgb function is incomplete. Complete it so that passing in RGB decimal values will result in a hexadecimal representation being returned. Valid decimal values for RGB are 0 - 255. Any values that fall out of that range must be rounded to the closest valid value.</p>
+                <pre>
+function rgb(...color){
+    return color.reduce((hex, item) => {
+        if(item &lt; 0){
+            item = 0;
+        } else if (item > 255){
+            item = 255;
+        }
+        var colorHEX = item.toString(16).toUpperCase();
+        if(colorHEX.length == 1) {
+            colorHEX = '0' + colorHEX;
+        }
+        return hex + colorHEX;
+    }, '');
+};
+</pre>
+            </section>
+            <section id="works">
+                <h2>Works example</h2>
+                <ul>
+                    <li><a href="https://snake911.github.io/ping-pongs/">Ping-Pong (JavaScript, canvas)</a></li>
+                    <li><a href="https://www.ekolab.ru/">Ekolab (HTML, CSS, JavaScript)</a></li>
+                    <li><a href="https://rossion.su/">Rossion (HTML, CSS, JavaScript)</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="wrapper">
+            <div>
+                <a href="https://github.com/Snake911">Volkov Danil</a>
+                2022
+            </div>
+            <div>
+                <a href="https://rs.school/js/">
+                    <img src="img/rs_school_js.svg" alt="rs school js" width="150" height="55">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
